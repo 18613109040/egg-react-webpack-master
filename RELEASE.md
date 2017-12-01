@@ -1,7 +1,36 @@
 # 版本发布
 
+## 3.3.1
+
+- support extract css hot reload.
+
+## 依赖更新
+
+- easywebpack 3.3.6
+- easywebpack-react 3.2.2
+
+
+## 3.3.0
+
+- ES6 module Webpack build mode
+- Support Tree-Shaking
+- Support jsx file hot reload, css hot reload will support in next version.
+
+## 依赖更新
+
+- egg-view-react-ssr 2.1.1
+- easywebpack-react 3.2.1
+
+
+## 修改文件
+
+- .babelrc  添加 `react-hot-loader/babel`  和 `modules: false`
+- app/web/page/spa/ssr.jsx `module.exports` 方式 改为 `export default`
+
+
 
 ## 3.2.0
+
 
 ### 依赖
 
@@ -21,7 +50,7 @@
 
 - webpack.config.js 配置变更, 目前采用兼容方式, 待 Webpack 发布 4.0 时, webpack-manifest-plugin 替换为 webpack-manifest-resource-plugin 
 
-```json
+```js
 {
    plugins: {
      buildfile: true,
@@ -31,7 +60,7 @@
 ```
 
 
-```json
+```js
 {
    plugins: {
      buildfile: false,
@@ -49,7 +78,7 @@
 
 
 
-```json
+```js
 {
     entry: {
         loader: {

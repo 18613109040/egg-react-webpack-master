@@ -22,28 +22,8 @@ module.exports = app => {
     webpackConfigList: EasyWebpack.getWebpackConfig()
   };
 
-  exports.mysql = {
-        client: {
-            host: '127.0.0.1',
-            // 端口号
-            port: '3306',
-            // 用户名
-            user: 'root',
-            // 密码
-            password: 'root',
-            // 数据库名
-            database: 'test'
-        },
-        // 是否加载到 app 上，默认开启
-        app: true,
-        // 是否加载到 agent 上，默认关闭
-        agent: false
-  };
-
   const localIP = ip.address();
-
   const domainWhiteList = [];
-
   [9000, 9001, 9002].forEach(port => {
     domainWhiteList.push(`http://localhost:${port}`);
     domainWhiteList.push(`http://127.0.0.1:${port}`);

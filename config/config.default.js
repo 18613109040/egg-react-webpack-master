@@ -22,5 +22,6 @@ module.exports = app => {
   exports.middleware = [
     'access'
   ];
+
   return exports;
 };

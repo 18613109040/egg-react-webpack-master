@@ -9,9 +9,7 @@ const tabItemClick = (key) =>{
 };
 
 export default class Module extends Component {
-
   render() {
-    console.log(this.props.message)
     return <div>
       <Header></Header>
       <div className="tab">

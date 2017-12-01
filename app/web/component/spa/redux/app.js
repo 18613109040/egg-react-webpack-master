@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import Home from 'component/spa/redux/components/home';
 import About from 'component/spa/redux/components/about';
-
 import { Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -21,7 +19,7 @@ class App extends Component {
   handleClick(e) {
     console.log('click ', e, this.state);
     this.setState({
-      current: e.key,
+      current: e.key
     });
   };
 

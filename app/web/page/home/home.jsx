@@ -6,8 +6,8 @@ export default class Home extends Component {
   componentDidMount() {
     console.log('----componentDidMount-----');
   }
+
   render() {
-    console.log("+++++++_________")
     return <div>
       <Header></Header>
       <div className="main">

@@ -1,5 +1,6 @@
 'use strict';
 import React, { Component } from 'react';
+
 export default class List extends Component {
   componentDidMount() {
     console.log('----List componentDidMount-----', this.props);
@@ -9,12 +10,11 @@ export default class List extends Component {
   }
 
   render() {
-    console.dir(this.props.list)
     return <div className="container smart-container">
       <div className="row row-offcanvas row-offcanvas-right">
         <div className="col-xs-12 col-sm-9">
           <ul className="smart-artiles" id="articleList">
-            {this.props.list.map((item) =>{
+            {this.props.list.map(function(item) {
               return <li key={item.id}>
                 <div className="point">+{item.hits}</div>
                 <div className="card">
@@ -27,7 +27,7 @@ export default class List extends Component {
                       <li className="tauthor">
                         <a href="#" target="_blank" className="get">Sky</a>
                       </li>
-                      <li ><a>+收藏</a></li>
+                      <li><a>+收藏</a></li>
                       <li>
                         <span className="timeago">{item.summary}</span>
                       </li>

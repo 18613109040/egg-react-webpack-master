@@ -1,9 +1,6 @@
 
 module.exports = app => {
   app.get('/', app.controller.home.home.index);
-
-  app.get('/sweepStakes', app.controller.sweepStakes.index.start);
-
   app.get('/client', app.controller.home.home.client);
   app.get('/hello/element', app.controller.hello.hello.element);
   app.get('/hello/component', app.controller.hello.hello.component);
@@ -20,6 +17,5 @@ module.exports = app => {
   app.get('/spa/redux(/.+)?', app.controller.spa.spa.redux);
   app.get('/spa/client(/.+)?', app.controller.spa.spa.client);
   app.get('/spa(/.+)?', app.controller.spa.spa.ssr);
-  // app.get('/test', app.controller.test.test.index);
-  // app.get('/test/demo',app.controller.test.test.demo);
+  app.get('/test', app.controller.test.test.index);
 };

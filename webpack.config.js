@@ -2,6 +2,7 @@ const path = require('path');
 module.exports = {
   egg: true,
   framework: 'react',
+  devtool: 'source-map',
   entry: {
     include: ['app/web/page',
       { layout: 'app/web/framework/layout/layout.jsx?loader=false' },
@@ -24,13 +25,17 @@ module.exports = {
   cssModule: {
     include: 'app/web/page/css/module'
   },
-  cssExtract: true,
   loaders: {
     eslint: false,
     less: false,
     stylus: false
   },
   plugins: {
+    define:{
+      args(){
+        return { isServer: !!this.ssr, isDev: !!this.dev };
+      }
+    },
     imagemini: false,
     buildfile: false,
     manifest: false,  // old manifest feature
