@@ -16,6 +16,7 @@ const clientRender = () => {
   const url = store.getState().url;
   ReactDOM.render(
     <div>
+      <Header></Header>
       <Provider store={ store }>
         <BrowserRouter>
           <SSR url={ url }/>
@@ -27,6 +28,7 @@ const clientRender = () => {
 };
 
 const serverRender = (context, options)=> {
+
   const url = context.state.url;
   const branch = matchRoutes(routes, url);
   const promises = branch.map(({route}) => {
@@ -43,6 +45,7 @@ const serverRender = (context, options)=> {
     return () =>(
       <Layout>
         <div>
+          <Header></Header>
           <Provider store={store}>
             <StaticRouter location={url} context={{}}>
               <SSR url={url}/>

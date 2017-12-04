@@ -8,7 +8,8 @@ module.exports = {
       { layout: 'app/web/framework/layout/layout.jsx?loader=false' },
       { 'spa/redux': 'app/web/page/spa/redux.jsx?loader=false' },
       { 'spa/client': 'app/web/page/spa/client.jsx?loader=false' },
-      { 'spa/ssr': 'app/web/page/spa/ssr.jsx?loader=false' }
+      { 'spa/ssr': 'app/web/page/spa/ssr.jsx?loader=false' },
+        { 'vb/index': 'app/web/page/vb/index.jsx?loader=false' }
     ],
     exclude: ['app/web/page/test'],
     loader: {
@@ -20,7 +21,11 @@ module.exports = {
     asset: 'app/web/asset',
     component: 'app/web/component',
     framework: 'app/web/framework',
-    store: 'app/web/store'
+    store: 'app/web/store',
+      reducers:"app/web/reducers",
+      actions:"app/web/actions",
+      containers:"app/web/containers",
+      actions:"app/web/actions"
   },
   cssModule: {
     include: 'app/web/page/css/module'
