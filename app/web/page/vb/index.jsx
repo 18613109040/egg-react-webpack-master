@@ -8,6 +8,7 @@ import Layout from 'framework/layout/phoneLayout.jsx';
 import App from './app';
 import { create } from 'store/configureStore';
 import routes from './routes'
+import 'asset/css/index.less'
 const clientRender = () => {
     const store = create(window.__INITIAL_STATE__);
     const url = store.getState().url;
@@ -26,8 +27,10 @@ const clientRender = () => {
 const serverRender = (context, options)=> {
     const url = context.state.url;
     const branch = matchRoutes(routes, url);
+
     const promises = branch.map(({route}) => {
         const fetch = route.component.fetch;
+        console.log( route.component.fetch)
         return fetch instanceof Function ? fetch() : Promise.resolve(null)
     });
     return Promise.all(promises).then(data => {
@@ -41,7 +44,7 @@ const serverRender = (context, options)=> {
             <Layout>
                 <div>
                     <Provider store={store}>
-                        <StaticRouter location={url} context={{}}>
+                        <StaticRouter location={url} context={context}>
                             <App url={url}/>
                         </StaticRouter>
                     </Provider>

@@ -1,9 +1,13 @@
 import {combineReducers} from 'redux'
 
-import {update} from './home'
+import {bannerList,classicMenu,activeMenu,product} from './home'
 
 const rootReducer = combineReducers({
-    update
+
+    bannerList,
+    classicMenu,
+    activeMenu,
+    product
 })
 
 export default rootReducer

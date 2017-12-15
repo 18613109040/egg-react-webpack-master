@@ -7,9 +7,8 @@ export default class Layout extends Component {
             <title>{this.props.title}</title>
             <meta charSet="utf-8"></meta>
             <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"></meta>
-            <meta name="keywords" content={this.props.keywords}></meta>
-            <meta name="description" content={this.props.description}></meta>
-            <meta charset="UTF-8"/>
+            {/*<meta name="keywords" content={this.props.keywords}></meta>*/}
+            {/*<meta name="description" content={this.props.description}></meta>*/}
             <meta name="apple-mobile-web-app-capable" content="yes"/>
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
             <meta name="apple-mobile-web-app-title" content="react"/>
@@ -29,8 +28,9 @@ export default class Layout extends Component {
             <meta name="x5-page-mode" content="app"/>
             <link rel="shortcut icon" href="http://vb.sibumbg.cn/resources/favicon.ico" type="image/x-icon"/>
         </head>
+        <script src="https://unpkg.com/alloytouch@0.2.5/alloy_touch.js" type="application/javascript"></script>
         <body>
-        <div id="app"></div>
+            <div id="app">{this.props.children}</div>
         </body>
         </html>;
     }

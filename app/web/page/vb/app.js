@@ -1,36 +1,26 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route, Link, Switch} from 'react-router-dom'
-import {connect} from "react-redux";
+import { TabBar } from 'antd-mobile';
 import ClassIfication from 'containers/ClassIfication/index';
 import Home from 'containers/Home/index';
+import NavBar from 'component/TabBar/index'
 
 class App extends Component {
     constructor(props) {
         super(props);
 
     }
-
     render() {
-        console.dir(this)
-        return <div>
-            <div>
-                <Link to="/vb/home">首页</Link>
+
+        return <div className="root">
+            <Switch>
+                <Route path="/home"  component={Home}/>
+                <Route path="/classification"  component={ClassIfication}/>
+            </Switch>
+            <div className="footer">
+                <NavBar {...this}/>
             </div>
-            <div>
-                <Link to="/vb/classification">分类</Link>
-            </div>
-            <div>
-                <Route path="/vb/home" component={Home}/>
-                <Route path="/vb/classification" component={ClassIfication}/>
-            </div>
-        </div>;
+        </div>
     }
 }
-
-function mapStateToProps(state) {
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps)(App)
+export default App

@@ -18,10 +18,9 @@ module.exports = app => {
   };
 
   exports.keys = '123456';
-
-  exports.middleware = [
-    'access'
-  ];
+    exports.security = {
+        csrf: false
+    };
 
   return exports;
 };

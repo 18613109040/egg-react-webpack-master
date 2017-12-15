@@ -6,15 +6,12 @@ module.exports = {
   entry: {
     include: ['app/web/page',
       { layout: 'app/web/framework/layout/layout.jsx?loader=false' },
-      { 'spa/redux': 'app/web/page/spa/redux.jsx?loader=false' },
-      { 'spa/client': 'app/web/page/spa/client.jsx?loader=false' },
-      { 'spa/ssr': 'app/web/page/spa/ssr.jsx?loader=false' },
         { 'vb/index': 'app/web/page/vb/index.jsx?loader=false' }
     ],
     exclude: ['app/web/page/test'],
     loader: {
-      client: 'app/web/framework/entry/client-loader.js',
-      server: 'app/web/framework/entry/server-loader.js'
+        client: 'app/web/framework/entry/client-loader.js',
+        server: 'app/web/framework/entry/server-loader.js'
     }
   },
   alias: {
@@ -32,8 +29,8 @@ module.exports = {
   },
   loaders: {
     eslint: false,
-    less: false,
-    stylus: false
+    less: true,
+    stylus: true
   },
   plugins: {
     define:{

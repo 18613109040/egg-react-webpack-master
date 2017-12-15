@@ -19,6 +19,7 @@
     "egg-view-react-ssr": "^2.1.0",
     "extend": "~3.0.0",
     "history": "^4.7.2",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.17.1",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "antd": "^2.13.2",
+    "antd-mobile": "^2.1.0",
     "autod-egg": "^1.0.0",
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",
@@ -38,8 +40,10 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.0.0",
     "directory-named-webpack-plugin": "^2.2.3",
     "easywebpack-react": "^3.2.2",
@@ -66,7 +70,8 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vconsole": "^2.5.2",
-    "webpack-manifest-resource-plugin": "0.0.4"
+    "webpack-manifest-resource-plugin": "0.0.4",
+    "babel-plugin-add-module-exports": "^0.2.1"
   },
   "engines": {
     "node": ">=6.0.0"

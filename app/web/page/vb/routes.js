@@ -16,11 +16,11 @@ const NotFound = () => {
 };
 const routes = [
     {
-        path: '/vb/home',
+        path: '/home',
         component: Home
     },
     {
-        path: '/vb/classification',
+        path: '/classification',
         component: ClassIfication
     },
     {

@@ -1,6 +1,7 @@
 {
   "presets": [
     "react",
+    "stage-0",
     ["env",  { "modules": false }]
   ],
   "plugins": [
@@ -8,6 +9,6 @@
     "transform-object-assign",
      "syntax-dynamic-import",
     "transform-object-rest-spread",
-    ["import", { libraryName: "antd", style: "css" }]],
+    ["import", {"libraryName": "antd-mobile", "style": true }]],
   "comments": false
 }

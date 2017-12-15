@@ -21,7 +21,13 @@ module.exports = app => {
   exports.webpack = {
     webpackConfigList: EasyWebpack.getWebpackConfig()
   };
-
+    exports.middleware = [
+        'access','proxy'
+    ];
+    exports.proxy = {
+        match: '/api',
+        host:"http://testxws.sibumbg.com"
+    };
   const localIP = ip.address();
   const domainWhiteList = [];
   [9000, 9001, 9002].forEach(port => {
